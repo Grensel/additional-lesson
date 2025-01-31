@@ -3,6 +3,9 @@ import "./App.css";
 import { Todolist } from "./Todolist";
 import { v1 } from "uuid";
 import { Button } from "./components/Button";
+import { Modal } from "./components/modal/Modal";
+// import { Croses } from "./components/Croses";
+// import s from "./components/Button.module.css";
 
 type ObjectType = {
   title: string;
@@ -19,6 +22,12 @@ export type TasksType = {
 export type FilterValuesType = "all" | "active" | "completed";
 
 export const App = () => {
+  // const croses = [
+  //   { id: 1, model: "ADIDAS", size: "XXX" },
+  //   { id: 1, model: "ABIBAS", size: "YYY" },
+  //   { id: 1, model: "PUMA", size: "ZZZ" },
+  // ];
+
   const [todo, setTodo] = useState<Array<ObjectType>>([
     {
       title: "What to learn",
@@ -205,7 +214,79 @@ export const App = () => {
   return (
     <div className="App">
       <div>
-        <Button title={"Deleted all todolists"} onClick={removeAllTodolists} />
+        <div>
+          {/* <Button className={s.blueForButton}>Blue Button</Button>
+          <Button className={s.redForButton}>Red Button</Button> */}
+          <Button onClick={() => {}} color={"red"}>
+            Red Button
+          </Button>
+          <Button onClick={() => {}} color={"seccondary"}>
+            Blue Button
+          </Button>
+          <Button onClick={() => {}}>Default Button</Button>
+          <Button onClick={() => {}} disabled>
+            Disabled Button
+          </Button>
+        </div>
+
+        {/* <Modal>
+          <h2>My modal window</h2>
+          <input type="text" placeholder="email" />
+          <input type="text" placeholder="pass" />
+          <button>send</button>
+        </Modal> */}
+        <Modal>
+          <h2>Confidient information</h2>
+          <input type="text" placeholder="email" />
+          <input type="text" placeholder="pass" />
+          <input type="text" placeholder="pass" />
+          <label>
+            <input type="checkbox" />I agree
+          </label>
+          <button>send</button>
+        </Modal>
+        {/* <Croses croses={croses}>
+          <input type="text" />
+          <Button onClick={() => {}} color={"red"}>
+            Red Button
+          </Button>
+          <Button onClick={() => {}} color={"seccondary"}>
+            Blue Button
+          </Button>
+          <p>text - text - text</p>
+          <p>text - text - text</p>
+          <Button onClick={() => {}}>Default Button</Button>
+          <Button onClick={() => {}} disabled>
+            Disabled Button
+          </Button>
+        </Croses>
+        <Croses croses={croses}>
+          <p>text - text - text</p>
+          <p>text - text - text</p>
+          <p>text - text - text</p>
+          <p>text - text - text</p>
+          <p>text - text - text</p>
+          <p>text - text - text</p>
+          <input type="text" />
+        </Croses>
+        <Croses croses={croses}>
+          <input type="text" />
+          <input type="text" />
+          <input type="text" />
+          <input type="text" />
+          <input type="text" />
+          <Button onClick={() => {}} color={"red"}>
+            Red Button
+          </Button>
+          <Button onClick={() => {}} color={"seccondary"}>
+            Blue Button
+          </Button>
+          <Button onClick={() => {}}>Default Button</Button>
+          <Button onClick={() => {}} disabled>
+            Disabled Button
+          </Button>
+        </Croses> */}
+        <Button onClick={removeAllTodolists}> Deleted all todolists</Button>
       </div>
       <div style={{ display: "flex", gap: "20px" }}>
         {todo.map((tl, index) => {

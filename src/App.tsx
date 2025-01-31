@@ -208,7 +208,6 @@ export const App = () => {
         <Button title={"Deleted all todolists"} onClick={removeAllTodolists} />
       </div>
       <div style={{ display: "flex", gap: "20px" }}>
-        {" "}
         {todo.map((tl, index) => {
           const allTodolistTasks = tl.tasks;
           let tasksForTodolist = allTodolistTasks;

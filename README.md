@@ -2,4 +2,4 @@
 
 # My starter project
 
-https://Grensel.github.io/start-project/
+https://Grensel.github.io/additional-lesson/

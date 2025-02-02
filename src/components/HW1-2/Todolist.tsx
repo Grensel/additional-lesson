@@ -1,6 +1,6 @@
 import { ChangeEvent, useState, KeyboardEvent } from "react";
-import { FilterValuesType, TasksType } from "./App";
-import { Button } from "./components/Button";
+import { FilterValuesType, TasksType } from "./HW1";
+import { Button } from "./Button";
 
 type PropsType = {
   id: number;

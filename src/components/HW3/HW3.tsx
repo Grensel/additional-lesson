@@ -21,14 +21,11 @@ const defaultMoney: MoneyType[] = [
   { banknote: "RUB", nominal: 100, id: v1() },
 ];
 
-export const moneyFilter = (
-  money: MoneyType[],
-  filter: BanknotsType
-): MoneyType[] => {
+export const moneyFilter = (money: MoneyType[], filter: BanknotsType): MoneyType[] => {
   //если пришел filter со значением 'All', то возвращаем все банкноты
   //return money.filter... ну да, придется фильтровать
   if (filter === "All") return money;
-  return money.filter((el) => el.banknote === filter);
+  return money.filter(el => el.banknote === filter);
 };
 
 export const HW3 = () => {
@@ -51,7 +48,7 @@ export const HW3 = () => {
 
   const removeMoney = (banknote: BanknotsType) => {
     // Снятие денег сделаем в последнюю очередь, после настройки фильтров и отрисовки денег
-    const index = money.findIndex((el) => el.banknote === banknote);
+    const index = money.findIndex(el => el.banknote === banknote);
     if (index !== -1) {
       setMoney(money.filter((el, i) => i !== index));
     }
@@ -68,3 +65,4 @@ export const HW3 = () => {
     </div>
   );
 };
+

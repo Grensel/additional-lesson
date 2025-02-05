@@ -1,12 +1,14 @@
 import "./App.css";
-import { HW3 } from "./components/HW-3/HW3";
-import { HW1 } from "./components/HW1-2/HW1";
+import { HW1Sprint2 } from "./components/HW1Sprint2/HW1Sprint2";
+// import { HW3 } from "./components/HW3/HW3";
+// import { HW1 } from "./components/HW1/HW1";
 
 export const App = () => {
   return (
     <div>
-      <HW1 />
-      <HW3 />
+      {/* <HW1 /> */}
+      {/* <HW3 /> */}
+      <HW1Sprint2 />
     </div>
   );
 };

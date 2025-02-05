@@ -21,9 +21,7 @@ export const CurrentBankomat = ({ money }: CurrentBankomatPropsType) => {
           </BanknoteBlue>
         )}
       </div>
-      <Banknote
-        color={money.banknote === "USD" ? "aquamarine" : "lightskyblue"}
-      >
+      <Banknote color={money.banknote === "USD" ? "aquamarine" : "lightskyblue"}>
         <Name>{money.banknote}</Name>
         <Nominal>{money.nominal}</Nominal>
       </Banknote>
@@ -48,7 +46,7 @@ type BanknoteType = {
   color: "aquamarine" | "lightskyblue";
 };
 const Banknote = styled.div<BanknoteType>`
-  background-color: ${(props) => props.color};
+  background-color: ${props => props.color};
   width: 200px;
   height: 100px;
   margin: 5px;

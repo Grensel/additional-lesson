@@ -9,12 +9,7 @@ type CountryPropsType = {
   removeMoney: (banknote: BanknotsType) => void;
 };
 
-export const Country = ({
-  data,
-  setFilterValue,
-  addMoney,
-  removeMoney,
-}: CountryPropsType) => {
+export const Country = ({ data, setFilterValue, addMoney, removeMoney }: CountryPropsType) => {
   // с деструктуризацией пожалуйста
   const setAll = () => {
     setFilterValue("All");
